@@ -365,10 +365,6 @@ int main() {
     DWORD exitCode;
     GetExitCodeProcess(hProcess, &exitCode);
     printf("[*] Exit code: 0x%lx\n", exitCode);
-    
-    if (exitCode == 0x41414141) {
-        printf("[+] Confirmed payload executed (0x41414141)\n");
-    }
 
     CloseHandle(hThread);
     CloseHandle(hProcess);
